@@ -1,140 +1,128 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>..::Planetas Curiosos::..</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Planets Discovery | Home</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Planets Discovery: lançamentos, coleções de reliquias, novidades e galeria. Página inicial responsiva com Bootstrap." />
+  <meta name="author" content="Planets Web" />
+
+  <!-- CSS (ordem: frameworks -> seu CSS) -->
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <!-- Fontes (mantidas para compatibilidade com seu projeto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+Egyptian+Hieroglyphs&family=Open+Sans:wght@500&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <!-- Início Menu -->
-    <header id="header">
-        <a id="logo" href="./index.html"><img src="./img/logo.avif" alt="Logotipo da Empresa Planetas Curiosos"></a>
-        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-            <span id="hamburger" aria-hidden="true"></span>
+  <!-- Acessibilidade: pular direto para o conteúdo -->
+  <a href="#conteudo" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
+
+  <!-- Início Menu -->
+  <header id="header">
+    <a id="logo" href="./index.html" aria-label="Ir para a página inicial">
+      <img src="./img/" alt="Logo Planets Discovery" />
+    </a>
+
+    <nav id="nav" aria-label="Menu principal">
+      <button
+        aria-label="Abrir Menu"
+        id="btn-mobile"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+        type="button"
+      >
+        <span id="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul id="menu" role="menu">
+        <li role="none"><a class="linkMenu" role="menuitem" href="./index.html" aria-current="page">Home</a></li>
+        <li role="none"><a class="linkMenu" role="menuitem" href="./quemsomos.html">Quem Somos</a></li>
+        <li role="none"><a class="linkMenu" role="menuitem" href="./produtos.html">Produtos</a></li>
+        <li role="none"><a class="linkMenu" role="menuitem" href="./videos.html">Vídeos</a></li>
+        <li role="none"><a class="linkMenu" role="menuitem" href="./contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Fim Menu -->
+
+  <!-- Conteúdo principal -->
+  <main id="conteudo">
+    <!-- Texto Alternativo (mantido para compatibilidade com seu CSS/JS) -->
+    <section aria-label="Texto alternativo" id="hieroglyph"></section>
+
+    <!-- Carousel Página Principal -->
+    <section aria-label="Destaques em banner">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-pause="none"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="800">
+            <img
+              src="./img/carousel_1_1280-x-720-gaming.jpg"
+              class="d-block w-100"
+              alt="Banner de destaque 1: ambiente gamer"
+            />
+          </div>
+
+          <div class="carousel-item" data-bs-interval="800">
+            <img
+              src="./img/carousel_2_1280-x-720-gaming.jpg"
+              class="d-block w-100"
+              alt="Banner de destaque 2: novidades para gamers"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="carousel-item" data-bs-interval="8000">
+            <img
+              src="./img/carousel_3_1280-x-720-gaming.jpg"
+              class="d-block w-100"
+              alt="Banner de destaque 3: lançamentos do mês"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#carouselExampleInterval"
+          type="button"
+          data-bs-slide="prev"
+          aria-label="Voltar banner"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
         </button>
-        <ul id="menu" role="menu">
-            <li role="none"><a class="linkMenu" role="menuitem" href="./index.html" aria-current="page">Home</a></li>
-            <li role="none"><a class="linkMenu" role="menuitem" href="./quem-somos.html">Quem Somos</a></li>
-            <li role="none"><a class="linkMenu" role="menuitem" href="./produtos.html">Produtos</a></li>
-            <li role="none"><a class="linkMenu" role="menuitem" href="./videos.html">Vídeos</a></li>
-            <li role="none"><a class="linkMenu" role="menuitem" href="./contato.html">Contato</a></li>
-        </ul>
-    </header>
-    <!-- Fim Menu -->
-     <!-- Conteúdo Principal -->
-      <main id="conteudo">
-        <section aria-label="Texto Alternativo" id="hieroglyph"></section>
 
-        <!-- carousel Página Principal -->
-         <section aria-label="Destaques em Banner">
-            <div
-                id="carouselExampleInterval"
-                class="carousel slide"
-                data-bs-rise="carousel"
-                data-bs-pause="none"
-            >
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="100">
-                    <!-- data-bs-interval > apontar em milisegundos -->
-                    <img
-                    src="./img/banner1.jpg"
-                    class="d-block w-100"
-                    alt="Banner de Destaque 1">
-                </div>
-                <div class="carousel-item"
-                data-bs-interval="600">
-                    <!-- data-bs-interval > apontar em milisegundos -->
-                    <img
-                    src="./img/banner2.jpg"
-                    class="d-block w-100"
-                    alt="Banner de Destaque 2">
-                </div>
-                <div class="carousel-item"
-                data-bs-interval="600">
-                    <!-- data-bs-interval > apontar em milisegundos -->
-                    <img
-                    src="./img/banner3.jpg"
-                    class="d-block w-100"
-                    alt="Banner de Destaque 3">
-                </div>
-                <div class="carousel-item"
-                data-bs-interval="600">
-                    <!-- data-bs-interval > apontar em milisegundos -->
-                    <img
-                    src="./img/banner4.jpg"
-                    class="d-block w-100"
-                    alt="Banner de Destaque 4">
-                </div>
-                <div class="carousel-item"
-                data-bs-interval="600">
-                    <!-- data-bs-interval > apontar em milisegundos -->
-                    <img
-                    src="./img/banner5.webp"
-                    class="d-block w-100"
-                    alt="Banner de Destaque 5">
-                </div>
-            </div>
-            <button
-            class="carousel-control-prev"
-            data-bs-target="#carouselExampleInterval"
-            type="button"
-            data-bs-slide="prev"
-            aria-label="Voltar Banner"            
-            >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-            </button>
-            <button
-            class="carousel-control-next"
-            data-bs-target="#carouselExampleInterval"
-            type="button"
-            data-bs-slide="next"
-            aria-label="Avançar Banner"            
-            >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-            </button>
-            </div>
-         </section>
-         <!-- fim carousel 06/03/2026 -->
-          <!-- Início Banner -->
+        <button
+          class="carousel-control-next"
+          data-bs-target="#carouselExampleInterval"
+          type="button"
+          data-bs-slide="next"
+          aria-label="Avançar banner"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+    <!-- Fim Carousel -->
 
-      </main>
     
 </body>
 
-<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+  <!-- JS (sempre antes do </body>) -->
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..:: Space Developer ::..</title>
-</head>
-<body>
-    <!-- Início Menu -->
-    <header id="header">
-        <a id="logo" href="index.html"><img src="./img/logo_mustang.webp" alt="Logo da Empresa Espaço Developer"></a>
-        <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
-                <span id="hamburger"></span>
-            </button>
-            <ul id="menu" role="menu">
-                <li><a class="linkMenu" href="./index.html">Home</a></li>
-                <li><a class="linkMenu" href="./quem_somos.html" target="_blank">Quem Somos</a></li>
-                <li><a class="linkMenu" href="./produtos.html" target="_blank">Produtos</a></li>
-                <li><a class="linkMenu" href="./videos.html" target="_blank">Vídeos</a></li>
-                <li><a class="linkMenu" href="./contato.html" target="_blank">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Fim Menu -->
-    
-</body>
->>>>>>> 1ac9784091933ddc81c88ff67bc0ba09b095e088
 </html>
